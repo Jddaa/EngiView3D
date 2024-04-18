@@ -1,0 +1,255 @@
+.modelo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.demo-card-wide {
+  width: 300px;
+  max-width: 500px;
+  margin: 10px;
+}
+
+.demo-card-wide.mdl-card {
+  width: 400px;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url("imagenes/espectro.jpg") center / cover;
+}
+.demo-card-wide > .mdl-card__title2 {
+  color: #fff;
+  height: 176px;
+  background: url("imagenes/centrifuga.jpg") center / cover;
+}
+.demo-card-wide > .mdl-card__title3 {
+  color: #fff;
+  height: 176px;
+  background: url("imagenes/cabinas_flujo_laminar.jpg") center / cover;
+}
+.demo-card-wide > .mdl-card__title4 {
+  color: #fff;
+  height: 176px;
+  background: url("imagenes/caminadora.jpg") center / cover;
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.page-content {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  /*width: 50vh;*/
+  flex-wrap: wrap;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%; /* Adjust if needed */
+}
+
+.a {
+  background-color: #ddd;
+  text-align: center;
+}
+
+.logo {
+  width: 6em; /* ajusta el tamaño de la imagen según tu preferencia */
+  height: auto; /* asegura que la imagen conserve su proporción de aspecto */
+  margin-right: 1em; /* añade un margen derecho para separar el logo del título */
+}
+.mdl-layout__header-row {
+  background-color: #c4161c;
+}
+.mdl-tabs__tab-bar {
+  display: flex;
+  height: auto;
+  width: 100vw;
+}
+
+.mdl-tabs__tab {
+  font-size: 2.5vw;
+  width: 30vw;
+}
+.boton-volver {
+  display: flex;
+  height: auto;
+  width: 10vw;
+}
+img {
+  height: auto;
+  width: 75vw;
+}
+
+video {
+  height: auto;
+  width: 75vw;
+}
+.video {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: auto;
+  width: 100vw;
+}
+
+.galeria {
+  box-shadow:
+    0 4px 8px 0 #c4161c,
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  float: left;
+  width: 100vw;
+}
+.mdl-tabs__tab:hover {
+  background-color: hwb(0 24% 76%);
+  color: #ddd;
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.boton-cambiar {
+  background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.boton-cambiar:hover {
+  background-color: #b5b9b6;
+  color: rgb(255, 255, 255); /* Darker Green */
+}
+
+a {
+  color: rgb(255, 255, 255);
+  width: 10vw;
+  height: auto;
+  text-align: center;
+}
+.centrado {
+  text-align: center;
+}
+.boton1 {
+  background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 35vw;
+  height: 15vh;
+}
+.boton1:hover {
+  background-color: #b5b9b6;
+  color: white;
+}
+.boton2 {
+  background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.boton2:hover {
+  background-color: #b5b9b6;
+  color: white;
+}
+.devuelvis {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  height: 20%; /* Adjust if needed */
+  display: flex;
+  background-color: #5e0c0c;
+  font-size: 2vw;
+  height: 5vh;
+}
+.regreso {
+  text-decoration: none;
+}
+.imagencita {
+  text-align: center;
+}
+.imagencita img {
+  width: 50vw;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .imagencita img {
+    width: 100vw;
+    height: auto;
+  }
+  .boton1 {
+    width: 47vw;
+    height: 15vh;
+  }
+  .devuelvis {
+    font-size: 16px;
+  }
+}
+
+.tarjetas {
+  width: 80vw;
+  /*height: auto;*/
+}
+
+footer {
+  background-color: #c4161c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  /*gap: 2px;*/
+  /*white-space: inherit;*/
+}
+.license-link {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+}
+.license-link img {
+  height: 15px;
+  margin-left: 3px;
+  /*vertical-align: middle;*/
+}

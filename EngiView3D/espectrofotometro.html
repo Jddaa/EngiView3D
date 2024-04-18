@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>EngiView3D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.pink-red.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!--<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
+  </head>
+  <body>
+    <div class="mdl-layout--no-drawer-button mdl-js-layout mdl-layout--fixed-header">
+      <!-- Cabecera de la aplicación -->
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span> <img src="imagenes/UAO-logo-acreditacion.png" alt="logo" class = "logo"></span>
+          <!-- Título de la aplicación -->
+          <span class="mdl-layout-title">Espectrofotómetro</span>
+          
+        </div>
+        <div class="devuelvis">
+          <a class = "regreso" href="index.html">INICIO</a>
+        </div>
+      </header>       
+      <!-- Menú de la aplicación -->     
+      <!-- Contenido de la aplicación 
+      <main class="mdl-layout__content">
+        <div class="page-content" id="canvas-container"></div>
+      </main>-->
+      <div class= "flex-container">
+        <main class="mdl-layout__content">
+          <div class="mdl-tabs mdl-js-tabs">
+            <div class="mdl-tabs__tab-bar">
+
+                <a href="#modelo-panel" class="mdl-tabs__tab is-active" onclick="pausarVid()">Visualizador</a>
+                <a href="#video-panel" class="mdl-tabs__tab">Uso</a>
+                <a href="#caracteristicas-panel" class="mdl-tabs__tab" onclick="pausarVid()">Características</a>
+            </div>
+            <div class="mdl-tabs__panel is-active" id="modelo-panel">
+              <div class = "modelo">
+                <model-viewer id="modelo-viewer" src = "ESPECTRO_Cerrado.gltf" autorotate ar ar-modes="scene-viewer webxr quick-look" camera-controls style = "height: 80vh; width:100vw;">
+                </model-viewer>
+                <div class="centrado">
+                  <a onclick="cambiarModelo()" class="boton-cambiar mdl-button mdl-js-button mdl-js-ripple-effect">Abrir</a>
+                  <!--<button class="boton-cambiar" onclick="cambiarModelo()">Cambiar Modelo</button>-->
+                </div>
+                <!--Objeto 3D-->
+                <!--<a-scene arjs>
+                  <a-marker preset = "hiro">
+                    <a-entity>
+                      <a-sphere radius="5" color="blue"></a-sphere>
+                    </a-entity>
+                  </a-marker>
+                  <a-entity camera-position="0 0 0">
+                  </a-entity>
+                </a-scene arjs>-->
+
+              </div>
+            </div>
+            <div class="mdl-tabs__panel" id="video-panel">
+              <div class="galeria">
+                <div class="video">
+                    <video id="videoUso" controls>
+                      <source src= "videoArquitectura.mp4" type="video/mp4">
+                      <track src = "subtitulos_troll.vtt" kind = "subtitles" srclang = "es" label = "Español" default>
+                    </video>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-tabs__panel" id="caracteristicas-panel">
+              <div class="imagencita">
+                <img src="imagenes/ESPECTROFOTÓMETRO.jpg" alt="img" />
+              </div>
+              <div class="flex-container">
+                  <button onclick="mostrarImagen1()" class="boton1">Información Espectrofotómetro</button>
+                  <button onclick="mostrarImagen2()" class="boton1">Características Genesys 20</button>
+                  <button onclick="ocultarImagen()" class="boton2" style="display: none;">Cerrar</button>
+              </div>
+              <div id="imagen-1" style="display: none;" class="centrado">
+                  <img src="imagenes/info_queEs.jpeg" alt="Imagen 1">
+              </div>
+              <div id="imagen-2" style="display: none;" class="centrado">
+                  <img src="imagenes/info_espectroCarcateristicas.jpeg" alt="Imagen 2">
+              </div>
+          </div>     
+        </main>   
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+      
+    <footer class="footerLicense">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">EngiView3D</span> tiene licencia <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" 
+        target="_blank" rel="licencia noopener noreferrer"class="license-link">CC BY 4.0
+        <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+        <img class="by-icon" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>
